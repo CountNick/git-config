@@ -1,0 +1,13 @@
+[user]
+        name = your github name
+        email = your email
+
+[alias]
+        rbi = !sh -c \"git rebase -i $(git merge-base $1 HEAD)\" -
+
+        r = rebase
+        rc = rebase --continue
+        rs = rebase --skip
+        psf = push --force-with-lease
+
+        purge = "!git branch --merged | grep -Ev '(\\*|main|master|develop|staging)' | xargs -n 1 git branch -d"
